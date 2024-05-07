@@ -107,7 +107,7 @@ Se adjunta a esta acta la planificación inicial.
 
 Un dosificador de líquidos, utilizado en procesos industriales, facilita el control de las dosis aplicadas de manera controlada, continua y precisa durante un proceso específico. Generalmente, estos sistemas incorporan un medio de bombeo que permite un flujo de líquido hacia la salida del dosificador y un caudalímetro para el sensado del caudal.
 
-Comúnmente, los sistemas de dosificación controlada constan de un único parámetro de referencia, el cual es llamado punto de trabajo. Su valor es ingresado por el usuario y representa la dosis o caudal que se desea mantener de forma continua a la salida del dosificador. El lazo cerrado del control del sistema se ajusta a través de un circuito que adquiere la señal del caudalímetro, la compara con la del punto de trabajo deseado por el usuario y ajusta la salida para lograrlo.
+Comúnmente, los sistemas de dosificación controlada constan de un único parámetro de referencia, el cual es llamado punto de trabajo. Su valor es ingresado por el usuario y representa la dosis o caudal que se desea mantener de forma continua a la salida del dosificador. El lazo cerrado del control del sistema se ajusta a través de un circuito que adquiere la señal del caudalímetro, la compara con la del punto de trabajo ingresado por el usuario y ajusta la salida para lograrlo.
 
 A continuación, en la figura \ref{fig:diagCaudalimetroGenerico} se ilustra un sistema dosificador continuo y controlado utilizado en la industria actualmente.
 
@@ -118,15 +118,15 @@ A continuación, en la figura \ref{fig:diagCaudalimetroGenerico} se ilustra un s
 \label{fig:diagCaudalimetroGenerico}
 \end{figure}
 
-A pesar de ser un sistema utilizado en distintos procesos industriales, los sistemas de dosificación actuales no pueden transportarse ya que están fijos en una etapa del proceso. Además estos controlan grandes o medianos caudales y su punto de trabajo se mantiene constante. En consecuencia, aquellas aplicaciones que requieran transportar y utilizar un dosificador en distintos lugares, o utilizar parámetro de referencia variable para la dosificación, no pueden ejecutarse.
+A pesar de ser un sistema utilizado en distintos procesos industriales, los sistemas de dosificación actuales no pueden transportarse ya que están fijos en una etapa del proceso. Además, estos controlan grandes o medianos caudales y su punto de trabajo se mantiene constante. En consecuencia, aquellas aplicaciones que requieran transportar un dosificador a distintos lugares o utilizar un parámetro de referencia variable para la dosificación, no pueden llevarse a cabo.
 
-A raíz de esta problemática, se decide realizar un prototipo de un nuevo sistema de dosificación portable e innovador. Este sistema de dosificación controlada se le añade, como característica principal, la posibilidad de que el parámetro de referencia sea autoajustable, a través de un parámetro variable, en vez de estático como es el caso de los sistemas actuales. Además, se incorporara una interfaz de usuario que permita la interacción y configuración del sistema, como el parámetro de referencia variable, visualización de estadísticas, y otras funcionalidades a definir. 
+A raíz de esta problemática, se decide realizar un prototipo de un nuevo sistema de dosificación portable e innovador. Este sistema de dosificación controlada se le añade, como característica principal, la posibilidad de que el parámetro de referencia sea autoajustable, a través de un parámetro variable, en vez de uno estático como es el caso de los sistemas actuales. Además, se incorporara una interfaz de usuario que permita la interacción y configuración del sistema, como el parámetro de referencia variable, visualización de estadísticas, y otras funcionalidades a definir. 
 
-También se utilizarán distintos subsistemas de control y alarma para el nivel del líquido del tanque, medición de temperatura y control del sistema de alimentación eléctrico. Como enfoque principal de aplicación, se desarrollará un sistema de dosificación de líquidos para aplicaciones industriales de bajo caudal. Este proyecto se realiza como un emprendimiento personal, junto a un colaborador, el cuál será responsable del diseño mecánico e hidráulico.
+También, se utilizarán distintos subsistemas de control y alarma para el nivel del líquido del tanque, medición de temperatura y control del sistema eléctrico de alimentación. Como enfoque principal de aplicación, se desarrollará un sistema de dosificación de líquidos para aplicaciones industriales de bajo caudal.
 
-La característica de autoajustable permite la introducción de un parámetro de referencia variable, lo que facilita el autoajuste del sistema de dosificación para adaptar el caudal de salida a las condiciones cambiantes del proceso. Esto es importante, ya que distintos procesos industriales requieren ajustes de caudal constantemente, porque el éxito de estos procesos dependen de variar el caudal, en función de la magnitud de ciertos parámetros variables como temperatura, peso y otros.
+La característica de autoajustable permite la introducción de un parámetro de referencia variable, lo que facilita el autoajuste del sistema de dosificación para adaptar el caudal de salida a las condiciones cambiantes del proceso. Esto es importante, ya que distintos procesos industriales requieren ajustes de caudal constantes. El éxito de estos procesos dependen de variar el caudal en función de la magnitud de ciertos parámetros variables, como puede ser la temperatura, el peso y otros.
 
-A continuación, en la figura \ref{fig:diagBloquesGeneral} se ilustra un diagrama en bloques del sistema propuesto. Se puede observar los bloques del sistema electrónico y de alimentación que se desarrollará durante este trabajo. Cabe destacar que el sistema electromecánico no será incluido.
+A continuación, en la figura \ref{fig:diagBloquesGeneral} se ilustra un diagrama en bloques del sistema propuesto. Se puede observar los distintos bloques que conforman el sistema electrónico y el bloque del sistema eléctrico de alimentación, que se desarrollará durante este trabajo. El sistema electromecánico no será incluido en este trabajo.
 
 \begin{figure}[htpb]
 \centering 
@@ -135,7 +135,7 @@ A continuación, en la figura \ref{fig:diagBloquesGeneral} se ilustra un diagram
 \label{fig:diagBloquesGeneral}
 \end{figure}
 
-
+Es importante destacar que este proyecto se realiza como un emprendimiento personal, junto a un colaborador, el cuál será responsable del diseño mecánico e hidráulico. Este proyecto se circunscribe al desarrollo del firmware y hardware de este sistema.
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
@@ -165,7 +165,7 @@ Las características principales de cada uno de los interesados listados previam
 
 \begin{itemize}
 	\item Cliente: Ingeniero agrónomo de amplia experiencia en la industria alimentaria, agropecuaria y en el área comercial. Es una persona rigurosa y exigente al observar posibles mejoras en procesos industriales. Busca agilizar y eficientizar procedimientos y mecanismos agrícolas. La amplia experiencia permite que se pueda disponer de información respecto a los diferentes campos de aplicación del sistema a desarrollar, como así también los requerimientos mínimos a cumplir. 
-	\item Colaborador: Ingeniero electromecánico que trabaja como diseñador y desarrollador de sistemas mecánicos, térmicos e hidráulicos. Una persona que trabaja de forma profesional y al desarrollar proyectos busca de forma exhaustiva cumplir con sus objetivos. Consta de un amplio conocimiento en maquinarias agropecuarias de siembra y cosecha, en los que puede ser aplicado el sistema a desarrollar.
+	\item Colaborador: Ingeniero electromecánico que trabaja como diseñador y desarrollador de sistemas mecánicos, térmicos e hidráulicos. Una persona que trabaja de forma profesional, que al desarrollar proyectos busca de forma exhaustiva cumplir con sus objetivos. Consta de un amplio conocimiento en maquinarias agropecuarias de siembra y cosecha, en los que puede ser aplicado el sistema a desarrollar.
 	\item Orientador: \textcolor{red}{A DEFINIR}.
 \end{itemize}
 
@@ -173,54 +173,53 @@ Las características principales de cada uno de los interesados listados previam
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red}
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
+Se propone el desarrollo de un sistema prototipo de dosificación controlada y continua para líquidos en aplicaciones industriales. Este sistema permitirá autoajustarse en función de un parámetro externo dinámico o un parámetro estático ingresado por el usuario. Dado su enfoque en dosificación de bajo caudal, se diseñará para ser fácilmente transportable y con dimensiones adecuadas para ser manipulado por una persona. Este sistema constará de varios subsistemas, incluyendo una interfaz de usuario para el ingreso de parámetros de control y visualización, control de parámetros ambientales y eléctricos, así como control de nivel de tanque, entre otros.
 
-Se recomienda que sea solo un párrafo que continúe con la idea de la frase ``el propósito de este proyecto es...'' (omitir la frase, ya que está en el título de la sección).
-\end{consigna}
+La implementación de este sistema resuelve la problemática actual relacionada con la dificultad para mantener un flujo de dosificación autoajustable. Los sistemas de bajo costo disponibles en la actualidad no incorporan esta característica y carecen de portabilidad. Por lo tanto, el objetivo de este desarrollo es ofrecer una solución robusta, confiable y segura para su uso industrial. Esto permitirá a los usuarios reemplazar los antiguos procedimientos de dosificación aproximada en sus procesos industriales.
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
+Como se especificó en la sección \ref{sec:descripcion}, el prototipo del sistema de dosificador controlada y autoajustable consta de distintas características. Estas determinan el alcance de este trabajo final correspondiente a la  \degreename\hspace{1px}.
 
-Se refiere al trabajo que se va a hacer para entregar el producto o resultado especificado. 
+Este proyecto incluye:
 
-Explicitar todo lo quede comprendido dentro del alcance del proyecto. Por ejemplo:
-
-El proyecto incluye:
 \begin{itemize}
-	\item Ítem 1.
-	\item Ítem 2.
-		\begin{itemize}
-		\item Subítem 1.
-		\item Subítem 2.
-		\item ...
-		\end{itemize}
-	\item ...
-	
+	\item Desarrollo del prototipo funcional del sistema de dosificación controlada y autoajustable, consta de:
+			\begin{itemize}
+	\item Definición del algoritmo de control para la dosificación de líquidos.
+	\item Desarrollo del sistema de acondicionamiento señales de control y señales de realimentación.
+	\item Implementación del algoritmo de control en un sistema embebido.
+	\item Diseño e implementación de una interfaz de usuario para controlar y visualizar el funcionamiento del sistema.
+	\item Adquisición de parámetros ambientales y eléctricos requeridos.
+	\item Determinar un sistema de alimentación acorde al uso.
+			\end{itemize}
+	\item Pruebas funcionales y de concepto.
+	\item Reporte de resultados.
 \end{itemize}
 
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
+Este proyecto no incluye:
 
-\end{consigna}
+\begin{itemize}
+	\item Desarrollo del sistema hidráulico y mecánico.
+	\item Construcción de un producto final comercial.
+	\item Certificación del sistema a través de estándares.
+\end{itemize}
 
 
 \section{5. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red}
-``Para el desarrollo del presente proyecto se supone que: ...''
+Para el desarrollo del presente proyecto se tiene a consideración los siguientes supuestos:
 
 \begin{itemize}
-	\item Supuesto 1.
-	\item Supuesto 2.
-	\item ...
+	\item Interés del mercado y políticas macroeconómicas: Actualmente, no existen sistemas de estas características que se puedan comparar con lo propuesto. Así mismo, a través de una breve encuesta a distintos rubros productivos industriales, se pudo recolectar las características ideales que debería tener este nuevo producto. Por otra parte, a pesar de que se espera que las importaciones se flexibilicen en corto plazo, no se encontró un producto similar en el exterior del país, por lo que no parece ser una amenaza.
+	\item Disponibilidad de materiales: A pesar de que se espera una pronta flexibilización de las importaciones, aún es complicado importar productos electrónicos, por lo que se presupone que solo se podrá ingresar pequeñas cantidades de componentes. Esto es viable para este caso, ya que no se necesitan grandes cantidades para realizar este primer prototipo.
+	\item Desarrollo del prototipo: este proyecto solo será fabricado a nivel de prototipo, sin realizar iteraciones en su diseño.
+	\item Utilidad: Este proyecto se realiza con la intención de validar la idea y la viabilidad de realizar un control autoajustable estable, aplicando la teoría de control a través de sistemas digitales. Sin embargo, no se descarta de que su uso esté acotado a ciertas aplicaciones específicas, a causa de su posible inestabilidad.
+	\item Usuario final: Este será un trabajador de conocimiento técnico limitado al proceso industrial en cuestión, en consecuencia, el sistema debe ser lo más simple posible para que la cantidad de fallos posibles o errores de configuración sea limitada.
 \end{itemize}
 
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
-\end{consigna}
 
 \section{6. Requerimientos}
 \label{sec:requerimientos}
