@@ -1,11 +1,11 @@
 \documentclass[
 11pt, % The default document font size, options: 10pt, 11pt, 12pt
-codirector, % Uncomment to add a codirector to the title page
+%codirector, % Uncomment to add a codirector to the title page
 ]{charter} 
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Título del proyecto} 
+\titulo{Sistema de dosificación controlada y autoajustable de líquidos aplicado a procesos industriales} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 \posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -15,20 +15,20 @@ codirector, % Uncomment to add a codirector to the title page
 %\posgrado{Maestría en Internet de las cosas}
 % IMPORTANTE: no omitir titulaciones ni tildación en los nombres, también se recomienda escribir los nombres completos (tal cual los tienen en su documento)
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
-\autor{Título y Nombre del autor}
+\autor{Ing. Federico Leonardo Alderisi}
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{Título y Nombre del director}
 \pertenenciaDirector{pertenencia} 
-\codirector{Título y Nombre del codirector} % para que aparezca en la portada se debe descomentar la opción codirector en los parámetros de documentclass
+\codirector{} % para que aparezca en la portada se debe descomentar la opción codirector en los parámetros de documentclass -> {} %Título y Nombre del codirector
 \pertenenciaCoDirector{FIUBA}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Nombre del cliente}
-\empresaCliente{Empresa del cliente}
+\cliente{Ing. Carmelo Alderisi}
+\empresaCliente{-}
  
-\fechaINICIO{30 de abril de 2023}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{18 de junio de 2023} 	%Fecha de final de cursada de GdP
+\fechaINICIO{23 de abril de 2024}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlan{11 de junio de 2024} 	%Fecha de final de cursada de GdP
 \fechaFINALTrabajo{15 de mayo de 2024}	%Fecha de defensa pública del trabajo final
 
 
@@ -58,7 +58,7 @@ codirector, % Uncomment to add a codirector to the title page
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
-%1      & Se completa hasta el punto 5 inclusive                & {día} de {mes} de 202X \\ \hline
+1      & Se completa hasta el punto 5 inclusive                & {6} de {mayo} de 2024 \\ \hline
 %2      & Se completa hasta el punto 9 inclusive
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
@@ -84,7 +84,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en \textcolor{red}{la implementación de un prototipo de un sistema de control de temperatura de una caldera industrial}. El trabajo tendrá un presupuesto preliminar estimado de \textcolor{red}{600} horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un prototipo de un sistema de control de dosificación de líquidos industriales, de forma controlada y autoajustable, mediante un parámetro externo provisto por el usuario. El trabajo tendrá un presupuesto preliminar estimado de \textcolor{red}{600} horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \textcolor{red}{\fechaFinalName}.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -105,50 +105,40 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-\begin{consigna}{red} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección. En cada entrega parcial deben eliminar los comandos begin y end del bloque consigna de las secciones que hayan completado.
-El objetivo es que el lector, en una o dos páginas, exponga de qué se trata el proyecto y cuáles son sus desafíos, cuál es la motivación para realizarlo y su importancia.
+Un dosificador de líquidos, utilizado en procesos industriales, facilita el control de las dosis aplicadas de manera controlada, continua y precisa durante un proceso específico. Generalmente, estos sistemas incorporan un medio de bombeo que permite un flujo de líquido hacia la salida del dosificador y un caudalímetro para el sensado del caudal.
 
-Se debe introducir el contexto del proyecto, el estado del arte en la temática, describir la propuesta de valor, cuál es el problema que atiende y cuál es la solución que se propone. Se debe dar una descripción funcional de la solución que incluya un diagrama en bloques.
+Comúnmente, los sistemas de dosificación controlada constan de un único parámetro de referencia, el cual es llamado punto de trabajo. Su valor es ingresado por el usuario y representa la dosis o caudal que se desea mantener de forma continua a la salida del dosificador. El lazo cerrado del control del sistema se ajusta a través de un circuito que adquiere la señal del caudalímetro, la compara con la del punto de trabajo deseado por el usuario y ajusta la salida para lograrlo.
 
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
-
-\begin{itemize}
-	\item ¿Cuál es el contexto del proyecto, es un emprendimiento personal, un proyecto para una empresa, es parte del programa de vinculación con empresas del posgrado?
-	\item ¿Existen o aplican condiciones especiales al proyecto, financiamiento de algún programa público o privado, acuerdos de confidencialidad, acuerdos sobre la propiedad intelectual de los entregables u otros?
-	\item ¿Cómo se compara la solución propuesta con el estado del arte en el campo de aplicación? ¿En qué aspectos destaca?
-	\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-	\item ¿En qué estado del ciclo de vida está la solución que se propone?
-	\item ¿Cuáles son las características del cliente (el adoptante de los entregables del proyecto) qué valora, qué necesita?
-	\item ¿Por dónde pasa la innovación?
-\end{itemize}
-
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema} y descripción funcional de la solución propuesta.
-
-Las figuras se deben mencionar en el texto ANTES de que aparezcan con una frase como la siguiente: ``En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''.  La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+A continuación, en la figura \ref{fig:diagCaudalimetroGenerico} se ilustra un sistema dosificador continuo y controlado utilizado en la industria actualmente.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.65\textwidth]{./Figuras/diagBloques.png}
-\caption{Diagrama en bloques del sistema.}
-\label{fig:diagBloques}
+\includegraphics[width=.45\textwidth]{./Figuras/diagCaudalimetroGenerico.png}
+\caption{Dosificador genérico.}
+\label{fig:diagCaudalimetroGenerico}
 \end{figure}
 
-\vspace{25px}
+A pesar de ser un sistema utilizado en distintos procesos industriales, los sistemas de dosificación actuales no pueden transportarse ya que están fijos en una etapa del proceso. Además estos controlan grandes o medianos caudales y su punto de trabajo se mantiene constante. En consecuencia, aquellas aplicaciones que requieran transportar y utilizar un dosificador en distintos lugares, o utilizar parámetro de referencia variable para la dosificación, no pueden ejecutarse.
 
-El tamaño del texto en TODAS las figuras debe ser adecuado \textbf{para que NO pase lo que ocurre en la figura \ref{fig:diagBloques}}, donde el lector debe esforzarse para poder leer el texto. 
+A raíz de esta problemática, se decide realizar un prototipo de un nuevo sistema de dosificación portable e innovador. Este sistema de dosificación controlada se le añade, como característica principal, la posibilidad de que el parámetro de referencia sea autoajustable, a través de un parámetro variable, en vez de estático como es el caso de los sistemas actuales. Además, se incorporara una interfaz de usuario que permita la interacción y configuración del sistema, como el parámetro de referencia variable, visualización de estadísticas, y otras funcionalidades a definir. 
 
-Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama. Se recomienda evitar colores primarios (como rojo, verde o cyan) y usar la gama de colores pastel.
-\end{consigna}
+También se utilizarán distintos subsistemas de control y alarma para el nivel del líquido del tanque, medición de temperatura y control del sistema de alimentación eléctrico. Como enfoque principal de aplicación, se desarrollará un sistema de dosificación de líquidos para aplicaciones industriales de bajo caudal. Este proyecto se realiza como un emprendimiento personal, junto a un colaborador, el cuál será responsable del diseño mecánico e hidráulico.
+
+La característica de autoajustable permite la introducción de un parámetro de referencia variable, lo que facilita el autoajuste del sistema de dosificación para adaptar el caudal de salida a las condiciones cambiantes del proceso. Esto es importante, ya que distintos procesos industriales requieren ajustes de caudal constantemente, porque el éxito de estos procesos dependen de variar el caudal, en función de la magnitud de ciertos parámetros variables como temperatura, peso y otros.
+
+A continuación, en la figura \ref{fig:diagBloquesGeneral} se ilustra un diagrama en bloques del sistema propuesto. Se puede observar los bloques del sistema electrónico y de alimentación que se desarrollará durante este trabajo. Cabe destacar que el sistema electromecánico no será incluido.
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.95\textwidth]{./Figuras/diagBloquesGeneral.png}
+\caption{Diagrama en bloques del sistema.}
+\label{fig:diagBloquesGeneral}
+\end{figure}
+
+
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
-
-\begin{consigna}{red} % este comando se debe borrar para la entrega, junto con la contraparte \end{consigna}{red} 
-\textbf{Nota importante:} borrar esto y todas las consignas en color rojo antes de entregar este documento). Esto se hace eliminando el par de comandos que forman el bloque consigna, \verb!\begin{consigna}{red}! y \verb!\end{consigna}{red}! del código. 
- 
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos. Si se considera que una persona cumple dos o más roles, entonces \textbf{solo dejarla en el rol más importante}. 
-
-Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente. Si una persona es el Responsable, \textbf{no debe ser colocado también como miembro del equipo}.
 
 
 \begin{table}[ht]
@@ -158,35 +148,26 @@ Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
+%Auspiciante   &                   &              	&        	\\ \hline
+Cliente       & \clientename      &\empclientename	& Consultor comercial	\\ \hline
+%Impulsor      &                   &              	&        	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
+Colaboradores & Ing. Julián Marchese                  & -              	& Diseñador       	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+%Equipo        & miembro1 \newline 
+%				miembro2          &              	&        	\\ \hline
+%Opositores    &                   &              	&        	\\ \hline
+%Usuario final &                   &              	&        	\\ \hline
 \end{tabularx}
 \end{table}
 
-El Director suele ser uno de los orientadores.
+Las características principales de cada uno de los interesados listados previamente son:
 
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Es deseable listar a continuación las principales características de cada interesado.
- 
-Por ejemplo:
 \begin{itemize}
-	\item Orientador: la Dra. Ing. María Gómez es experta en la temática y va a ayudar con la definición de los requerimientos y el desarrollo del firmware del embebido.
-	\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-	\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
+	\item Cliente: Ingeniero agrónomo de amplia experiencia en la industria alimentaria, agropecuaria y en el área comercial. Es una persona rigurosa y exigente al observar posibles mejoras en procesos industriales. Busca agilizar y eficientizar procedimientos y mecanismos agrícolas. La amplia experiencia permite que se pueda disponer de información respecto a los diferentes campos de aplicación del sistema a desarrollar, como así también los requerimientos mínimos a cumplir. 
+	\item Colaborador: Ingeniero electromecánico que trabaja como diseñador y desarrollador de sistemas mecánicos, térmicos e hidráulicos. Una persona que trabaja de forma profesional y al desarrollar proyectos busca de forma exhaustiva cumplir con sus objetivos. Consta de un amplio conocimiento en maquinarias agropecuarias de siembra y cosecha, en los que puede ser aplicado el sistema a desarrollar.
+	\item Orientador: \textcolor{red}{A DEFINIR}.
 \end{itemize}
-
-\end{consigna} % este comando se debe borrar para la entrega, junto con la contraparte \begin{consigna}{red}
 
 
 \section{3. Propósito del proyecto}
