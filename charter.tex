@@ -84,7 +84,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un prototipo de un sistema de control de dosificación de líquidos industriales, de forma controlada y autoajustable, mediante un parámetro externo provisto por el usuario. El trabajo tendrá un presupuesto preliminar estimado de \textcolor{red}{600} horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \textcolor{red}{\fechaFinalName}.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un prototipo de un sistema de control de dosificación de líquidos industriales, de forma controlada y autoajustable, mediante un parámetro externo provisto por el usuario. El trabajo tendrá un presupuesto preliminar estimado de \textcolor{red}{600} horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \textcolor{red}{fecha de presentación pública a definir}.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -107,7 +107,7 @@ Se adjunta a esta acta la planificación inicial.
 
 Un dosificador de líquidos, utilizado en procesos industriales, facilita el control de las dosis aplicadas de manera controlada, continua y precisa durante un proceso específico. Generalmente, estos sistemas incorporan un medio de bombeo que permite un flujo de líquido hacia la salida del dosificador y un caudalímetro para el sensado del caudal.
 
-Comúnmente, los sistemas de dosificación controlada constan de un único parámetro de referencia, el cual es llamado punto de trabajo. Su valor es ingresado por el usuario y representa la dosis o caudal que se desea mantener de forma continua a la salida del dosificador. El lazo cerrado del control del sistema se ajusta a través de un circuito que adquiere la señal del caudalímetro, la compara con la del punto de trabajo ingresado por el usuario y ajusta la salida para lograrlo.
+Comúnmente, los sistemas de dosificación controlada constan de un único parámetro de referencia, llamado punto de trabajo. Su valor es ingresado por el usuario y representa la dosis o caudal que se desea mantener de forma continua a la salida del dosificador. El lazo cerrado del control del sistema se ajusta a través de un circuito que adquiere la señal del caudalímetro, la compara con la del punto de trabajo ingresado por el usuario y ajusta la salida para lograrlo.
 
 A continuación, en la figura \ref{fig:diagCaudalimetroGenerico} se ilustra un sistema dosificador continuo y controlado utilizado en la industria actualmente.
 
@@ -120,13 +120,13 @@ A continuación, en la figura \ref{fig:diagCaudalimetroGenerico} se ilustra un s
 
 A pesar de ser un sistema utilizado en distintos procesos industriales, los sistemas de dosificación actuales no pueden transportarse ya que están fijos en una etapa del proceso. Además, estos controlan grandes o medianos caudales y su punto de trabajo se mantiene constante. En consecuencia, aquellas aplicaciones que requieran transportar un dosificador a distintos lugares o utilizar un parámetro de referencia variable para la dosificación, no pueden llevarse a cabo.
 
-A raíz de esta problemática, se decide realizar un prototipo de un nuevo sistema de dosificación portable e innovador. Este sistema de dosificación controlada se le añade, como característica principal, la posibilidad de que el parámetro de referencia sea autoajustable, a través de un parámetro variable, en vez de uno estático como es el caso de los sistemas actuales. Además, se incorporara una interfaz de usuario que permita la interacción y configuración del sistema, como el parámetro de referencia variable, visualización de estadísticas, y otras funcionalidades a definir. 
+A raíz de esta problemática, se decide realizar un prototipo de un nuevo sistema de dosificación portable e innovador. A este sistema de dosificación controlada se le añade, como característica principal, la posibilidad de que el parámetro de referencia sea autoajustable, a través de un parámetro variable, en vez de uno estático como es el caso de los sistemas actuales. Además, se incorporará una interfaz de usuario que permita la interacción y configuración del sistema, como el parámetro de referencia variable, visualización de estadísticas y otras funcionalidades a definir. 
 
 También, se utilizarán distintos subsistemas de control y alarma para el nivel del líquido del tanque, medición de temperatura y control del sistema eléctrico de alimentación. Como enfoque principal de aplicación, se desarrollará un sistema de dosificación de líquidos para aplicaciones industriales de bajo caudal.
 
-La característica de autoajustable permite la introducción de un parámetro de referencia variable, lo que facilita el autoajuste del sistema de dosificación para adaptar el caudal de salida a las condiciones cambiantes del proceso. Esto es importante, ya que distintos procesos industriales requieren ajustes de caudal constantes. El éxito de estos procesos dependen de variar el caudal en función de la magnitud de ciertos parámetros variables, como puede ser la temperatura, el peso y otros.
+La característica de autoajustable permite la introducción de un parámetro de referencia variable, lo que facilita el autoajuste del sistema de dosificación para adaptar el caudal de salida a las condiciones cambiantes del proceso. Esto es importante, ya que distintos procesos industriales requieren ajustes de caudal constantes. El éxito de estos procesos depende de variar el caudal en función de la magnitud de ciertos parámetros variables, como puede ser la temperatura, el peso y otros.
 
-A continuación, en la figura \ref{fig:diagBloquesGeneral} se ilustra un diagrama en bloques del sistema propuesto. Se puede observar los distintos bloques que conforman el sistema electrónico y el bloque del sistema eléctrico de alimentación, que se desarrollará durante este trabajo. El sistema electromecánico no será incluido en este trabajo.
+A continuación, en la figura \ref{fig:diagBloquesGeneral} se ilustra un diagrama en bloques del sistema propuesto. Se pueden observar los distintos bloques que conforman el sistema electrónico y el bloque del sistema eléctrico de alimentación que se desarrollará durante este trabajo. El sistema electromecánico no será incluido.
 
 \begin{figure}[htpb]
 \centering 
@@ -135,7 +135,7 @@ A continuación, en la figura \ref{fig:diagBloquesGeneral} se ilustra un diagram
 \label{fig:diagBloquesGeneral}
 \end{figure}
 
-Es importante destacar que este proyecto se realiza como un emprendimiento personal, junto a un colaborador, el cuál será responsable del diseño mecánico e hidráulico. Este proyecto se circunscribe al desarrollo del firmware y hardware de este sistema.
+Es importante destacar que este proyecto se realiza como un emprendimiento personal, junto a un colaborador, que será responsable del diseño mecánico e hidráulico. Este proyecto se circunscribe al desarrollo del firmware y hardware de este sistema.
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
@@ -164,8 +164,8 @@ Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ 
 Las características principales de cada uno de los interesados listados previamente son:
 
 \begin{itemize}
-	\item Cliente: Ingeniero agrónomo de amplia experiencia en la industria alimentaria, agropecuaria y en el área comercial. Es una persona rigurosa y exigente al observar posibles mejoras en procesos industriales. Busca agilizar y eficientizar procedimientos y mecanismos agrícolas. La amplia experiencia permite que se pueda disponer de información respecto a los diferentes campos de aplicación del sistema a desarrollar, como así también los requerimientos mínimos a cumplir. 
-	\item Colaborador: Ingeniero electromecánico que trabaja como diseñador y desarrollador de sistemas mecánicos, térmicos e hidráulicos. Una persona que trabaja de forma profesional, que al desarrollar proyectos busca de forma exhaustiva cumplir con sus objetivos. Consta de un amplio conocimiento en maquinarias agropecuarias de siembra y cosecha, en los que puede ser aplicado el sistema a desarrollar.
+	\item Cliente: ingeniero agrónomo de amplia experiencia en la industria alimentaria, agropecuaria y en el área comercial. Es una persona rigurosa y exigente al observar posibles mejoras en procesos industriales. Busca agilizar y eficientizar procedimientos y mecanismos agrícolas. La amplia experiencia permite que se pueda disponer de información respecto a los diferentes campos de aplicación del sistema a desarrollar, como así también los requerimientos mínimos a cumplir. 
+	\item Colaborador: ingeniero electromecánico que trabaja como diseñador y desarrollador de sistemas mecánicos, térmicos e hidráulicos. Una persona que trabaja de forma profesional, que al desarrollar proyectos busca de forma exhaustiva cumplir con sus objetivos. Consta de un amplio conocimiento en maquinarias agropecuarias de siembra y cosecha, en los que puede ser aplicado el sistema a desarrollar.
 	\item Orientador: \textcolor{red}{A DEFINIR}.
 \end{itemize}
 
@@ -213,68 +213,124 @@ Este proyecto no incluye:
 Para el desarrollo del presente proyecto se tiene a consideración los siguientes supuestos:
 
 \begin{itemize}
-	\item Interés del mercado y políticas macroeconómicas: Actualmente, no existen sistemas de estas características que se puedan comparar con lo propuesto. Así mismo, a través de una breve encuesta a distintos rubros productivos industriales, se pudo recolectar las características ideales que debería tener este nuevo producto. Por otra parte, a pesar de que se espera que las importaciones se flexibilicen en corto plazo, no se encontró un producto similar en el exterior del país, por lo que no parece ser una amenaza.
-	\item Disponibilidad de materiales: A pesar de que se espera una pronta flexibilización de las importaciones, aún es complicado importar productos electrónicos, por lo que se presupone que solo se podrá ingresar pequeñas cantidades de componentes. Esto es viable para este caso, ya que no se necesitan grandes cantidades para realizar este primer prototipo.
-	\item Desarrollo del prototipo: este proyecto solo será fabricado a nivel de prototipo, sin realizar iteraciones en su diseño.
-	\item Utilidad: Este proyecto se realiza con la intención de validar la idea y la viabilidad de realizar un control autoajustable estable, aplicando la teoría de control a través de sistemas digitales. Sin embargo, no se descarta de que su uso esté acotado a ciertas aplicaciones específicas, a causa de su posible inestabilidad.
-	\item Usuario final: Este será un trabajador de conocimiento técnico limitado al proceso industrial en cuestión, en consecuencia, el sistema debe ser lo más simple posible para que la cantidad de fallos posibles o errores de configuración sea limitada.
+	\item Interés del mercado y del cliente: actualmente, no existen sistemas de estas características que se puedan comparar con lo propuesto. En consecuencia, el cliente tiene interés en que se desarrolle este sistema.
+	\item Disponibilidad de materiales: a pesar de que es complicado el proceso de importar productos electrónicos, es viable en este caso, ya que no se necesitan grandes cantidades para realizar un primer prototipo.
+	\item Desarrollo del prototipo: este sistema solo será fabricado a nivel de prototipo, sin realizar iteraciones en su diseño.
+	\item Presupuesto: este proyecto tendrá los fondos disponibles para financiar los gastos de inversión inicial y desarrollo.
+	\item Tiempo: se dispondrá del tiempo establecido por la planificación para lograr los objetivos.
 \end{itemize}
 
 
 \section{6. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
-Los requerimientos deben enumerarse y de ser posible estar agrupados por afinidad, por ejemplo:
-
 \begin{enumerate}
 	\item Requerimientos funcionales:
 		\begin{enumerate}
-			\item El sistema debe...
-			\item Tal componente debe...
-			\item El usuario debe poder...
+			\item Control:
+			\begin{enumerate}
+			\item El prototipo debe permitir controlar el caudal de líquido dosificado en milímetros cúbicos por minuto.
+			\item La muestra de caudal debe poder ser adquirida desde una señal provista por un caudalímetro.
+			\item La señal de salida del sistema de control debe permitir ser aplicada sobre un dispositivo de accionamiento, como una bomba o válvula, a definir durante el desarrollo.
+			\item El sistema de control debe permitir que el usuario ingrese un valor como punto de trabajo o admitir un valor de referencia externo que funcione como punto de trabajo variable.
+			\item El sistema debe permitir dosificar en forma continua, teniendo en cuenta el nivel del líquido del tanque y los límites de dosificación (de trescientos a \textcolor{red}{A DEFINIR} milímetros cúbicos por minuto).
+			\item El sistema debe lograr el equilibrio en un tiempo acotado, en función del proceso en el que se utilizará, siendo este tiempo menor a 3 segundos.			
+			\item El valor de referencia externo debe ser un valor acondicionado, que provenga de una entrada del sistema embebido utilizado.
+			\item El sistema de alimentación debe ser monitoreado para mantener la integridad del dosificador.
+			\item Otros parámetros a definir, como temperatura o variables del sistemas, deben poder ser monitoreados.
+			\end{enumerate}
+			\item Interfaz de usuario:
+			\begin{enumerate}
+			\item La interfaz debe permitir configurar la dosis y cambiar el modo de funcionamiento.
+			\item La pantalla debe presentar el estado general del dosificador, su modo de funcionamiento, las estadísticas, configuraciones y posibles alarmas a definir.
+			\item El teclado debe permitir ingresar el valor de dosificación de forma numérica, además de incluir las funciones para cambiar de menú, encender y apagar la bomba, y navegar dentro del menú.
+			\item El prototipo debe mostrar señales lumínicas en función del estado de la alimentación, modo de funcionamiento y alarmas.
+			\end{enumerate}
+			\item Alimentación:
+			\begin{enumerate}
+			\item El sistema de alimentación debe poder ser conectado a una línea de alimentación de 12 Volts C.C. y adaptar esta tensión a lo requerido por el dosificador.
+			\item El usuario debe poder encender o apagar el sistema de alimentación y, en consecuencia, el dosificador.
+			\item El controlador debe poder apagar el sistema de alimentación, como así también limitar y aislar los puntos de falla, como el sistema de accionamiento a definir.
+			\end{enumerate}
 		\end{enumerate}
+		
 	\item Requerimientos de documentación:
 		\begin{enumerate}
-			\item Requerimiento 1.
-			\item Requerimiento 2 (prioridad menor)
+			\item Se debe documentar de manera clara las instrucciones de uso del dosificador.
+			\item El sistema de control, junto a sus entradas y salidas, deben ser especificados eléctricamente para realizar su posterior conexión.
+			\item Se debe documentar las conexiones de alimentación y del sistema electromecánico para su puesta en marcha.
 		\end{enumerate}
-	\item Requerimiento de testing...
-	\item Requerimientos de la interfaz...
-	\item Requerimientos interoperabilidad...
-	\item etc...
+		
+	\item Requerimiento de testing y pruebas:
+		\begin{enumerate}
+			\item Se deben presentar resultados de las pruebas unitarias a definir y de integración.
+			\item Se deben realizar pruebas de aceptación en presencia del cliente.
+			\item Las pruebas del sistema deben evidenciar los objetivos propuestos en este trabajo.
+		\end{enumerate}
+		
+	\item Requerimientos de comunicación (opcional): el desarrollador podría proponer un sistema de comunicación inalámbrico, que permita al usuario conectarse a través de un celular y pueda configurar y visualizar datos.
 \end{enumerate}
-
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
-
-\textbf{¡¡¡No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!}
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-	\item Ser breve y conciso (nadie lee cosas largas). 
-	\item Ser específico: no dejar lugar a confusiones.
-	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna}
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: en esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+En esta sección se describen las historias de usuarios y sus puntajes correspondientes. Los 3 aspectos que definirán los puntajes de las historias son los siguientes:
 
-Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia.
-
-El formato propuesto es: 
 \begin{enumerate}
-\item ``Como [rol] quiero [tal cosa] para [tal otra cosa]."
-
-\textit{Story points}: 8 (complejidad: 3, dificultad: 2, incertidumbre: 3)
+\item Dificultad: cantidad del trabajo a realizar.
+\item Complejidad: complejidad del trabajo a realizar.
+\item Incertidumbre: riesgo del trabajo a realizar.
 \end{enumerate}
-\end{consigna}
+
+Se utilizará una escala de 3 puntos, donde el valor más alto implica mayor costo. A continuación, se listan los puntajes para cada item dentro de los \textit{Story points}.
+
+\begin{enumerate}
+\item Dificultad:
+\begin{itemize}
+	\item Baja: 1.
+	\item Media: 2.
+	\item Alta: 3.
+\end{itemize}
+\item Complejidad:
+\begin{itemize}
+	\item Baja: 1.
+	\item Media: 2.
+	\item Alta: 3.
+\end{itemize}
+\item Incertidumbre:
+\begin{itemize}
+	\item Baja: 1.
+	\item Media: 2.
+	\item Alta: 3.
+\end{itemize}
+\end{enumerate}
+
+Historia de usuarios:
+
+\begin{enumerate}
+\item Operario: ``Como operario de la industria química, desearía un dosificador que permita cambiar la dosificación de forma automática para no tener que hacerlo manualmente."
+
+\begin{itemize}
+	\item Dificultad media (2): realizar un sistema de control automático que depende de un parámetro variable es algo que puede generar inestabilidades durante su control. A pesar de esto, si se definen los tiempos de accionamiento y los límites, se puede realizar.
+	\item Complejidad alta (3): requiere implementar un sistema de control digital, donde se controle y limite la variable de entrada y salida, para evitar oscilaciones. Si el parámetro de entrada oscila rápidamente, puede generar inestabilidades durante la dosificación, por lo que es algo que se debe caracterizar.
+	\item Riesgo medio (2): en caso de que no pueda aplicarse un control automático en todos los casos, el sistema permite igualmente ingresar por teclado el punto de trabajo deseado, por lo que el usuario podrá de todas maneras reemplazar el sistema manual que utiliza actualmente.
+\end{itemize}
+
+\textit{Story points}: 7.
+
+\item Ingeniero agrónomo: ``Durante la siembra, se inyectan productos agropecuarios a la tierra y los operarios deben cambiar manualmente la dosis. Esto cuesta mucho durante el proceso ya que no es algo que se pueda hacer rápidamente, además de que no se puede controlar a simple vista. Desearía un sistema que permita ingresar un valor de dosis por teclado rápidamente y que sea visible, para constatar que este es el correcto y así evitar errores de dosificación."
+
+\begin{itemize}
+	\item Dificultad baja (1): realizar una interfaz de usuario a través de un teclado y una pantalla no es algo que requiera grandes esfuerzos.
+	\item Complejidad media (2): este sistema debe ser robusto y confiable, por lo que la validación de datos, confirmación y ajustes de parámetros es indispensable. Además, se debe proveer una interfaz duradera, ya que será utilizada en el campo.
+	\item Riesgo bajo (1): para lograr este objetivo, se debe analizar productos con interfaz de usuario que se utilizan en el campo. De esta manera se puede obtener una idea de qué tipo de interfaz rápida y confiable se puede utilizar. A pesar de esto, una mala interfaz puede generar molestia al momento de utilizar el dosificador.
+\end{itemize}
+
+\textit{Story points}: 4
+
+
+\end{enumerate}
+
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
