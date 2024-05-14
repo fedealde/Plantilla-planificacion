@@ -335,55 +335,83 @@ Historia de usuarios:
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-Los entregables del proyecto son (ejemplo):
+
+Los entregables del proyecto son:
 
 \begin{itemize}
+	\item Un prototipo.
 	\item Manual de usuario.
+	\item Instrucciones de puesta en marcha, que incluye las especificaciones de las distintas conexiones eléctricas.
 	\item Diagrama de circuitos esquemáticos.
-	\item Código fuente del firmware.
-	\item Diagrama de instalación.
 	\item Memoria del trabajo final.
-	\item etc...
 \end{itemize}
-\end{consigna}
+
 
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-El WBS debe tener relación directa o indirecta con los requerimientos.  Son todas las actividades que se harán en el proyecto para dar cumplimiento a los requerimientos. Se recomienda mostrar el WBS mediante una lista indexada:
+A continuación, se desglosa el trabajo en tareas con su duración estimada:
 
 \begin{enumerate}
-\item Grupo de tareas 1 (suma h)
+\item Desarrollo del prototipo (395 h).
+
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
-	\end{enumerate}
-\item Grupo de tareas 2 (suma h)
+	\item Modularización del sistema y definición de funcionalidades (80 h).
+	
+		\begin{enumerate}
+		\item Selección del dispositivo de accionamiento, medición de caudal y caracterización de las señales correspondientes (20 h).
+		\item Definición del sistema de control y algoritmo (30 h).
+		\item Determinación los periféricos de entrada y salida (15 h).
+		\item Definición de circuitos e interfaces de acondicionamiento de señales (15 h).
+		\end{enumerate}
+		
+	\item Selección del sistema embebido, circuitos periféricos e implementación del programa (160 h).
+	
+		\begin{enumerate}
+		\item Selección del sistema embebido, acorde a los requerimientos y el análisis previo (15 h).
+		\item Programación del sistema de control principal (40 h).
+		\item Programación de drivers (40 h).
+		\item Programación de la interfaz de usuario (35 h).
+		\item Programación de sistemas secundarios (30 h).
+		\end{enumerate}
+
+		
+	\item Hardware, sistema de alimentación, circuitos periféricos e interfaces de conexión (155 h).
+	
+		\begin{enumerate}
+		\item Definición de dispositivos y periféricos generales (interfaz de usuario, adaptadores de señales y otros) (30 h).
+		\item Diseño del sistema de alimentación (15 h).
+		\item Dimensionamiento de componentes (15 h).
+		\item Diseño de esquemáticos (35 h).
+		\item Diseño de placas y conexionado (30 h).
+		\item Ensamblaje del prototipo (20 h).
+		\item Pruebas eléctricas e inspección general (10 h).
+		\end{enumerate}		
+		
+	\end{enumerate}		
+		
+\item Testing (95 h).
+	
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
-	\end{enumerate}
-\item Grupo de tareas 3 (suma h)
+	\item Realizar pruebas unitarias (40 h).
+	\item Realizar pruebas de integración (35 h).
+	\item Realizar pruebas del sistema (20 h).
+	\end{enumerate}		
+		
+		
+\item Documentación (125 h).
+
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
-	\item Tarea 4 (tantas h)
-	\item Tarea 5 (tantas h)
+	\item Desarrollo de reporte de testing (25 h).
+	\item Elaboración del manual e instrucciones (20 h).
+	\item Redacción del informe de avance (20 h).
+	\item Redacción de la memoria del trabajo final (40 h).
+	\item Elaboración de la presentación del proyecto (20 h).
 	\end{enumerate}
+
 \end{enumerate}
 
-Cantidad total de horas: tantas.
-
-\textbf{¡Importante!:} la unidad de horas es h y va separada por espacio del número. Es incorrecto escribir ``23hs".
-
-\textbf{Se recomienda que no haya ninguna tarea que lleve más de 40 h.} De ser así se recomienda dividirla en tareas de menor duración.
-
-\end{consigna}
+Total de horas estimadas: 615 h.
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
