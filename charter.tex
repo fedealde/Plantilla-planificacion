@@ -59,7 +59,7 @@
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
 1      & Se completa hasta el punto 5 inclusive                & {6} de {mayo} de 2024 \\ \hline
-%2      & Se completa hasta el punto 9 inclusive
+2      & Se completa hasta el punto 9 inclusive					& {14} de {mayo} de 2024 \\ \hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & {día} de {mes} de 202X \\ \hline
@@ -157,7 +157,7 @@ Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ 
 %Equipo        & miembro1 \newline 
 %				miembro2          &              	&        	\\ \hline
 %Opositores    &                   &              	&        	\\ \hline
-%Usuario final &                   &              	&        	\\ \hline
+Usuario final & Trabajador del área industrial                   & -  & Proceso industrial   	\\ \hline
 \end{tabularx}
 \end{table}
 
@@ -167,6 +167,7 @@ Las características principales de cada uno de los interesados listados previam
 	\item Cliente: ingeniero agrónomo de amplia experiencia en la industria alimentaria, agropecuaria y en el área comercial. Es una persona rigurosa y exigente al observar posibles mejoras en procesos industriales. Busca agilizar y eficientizar procedimientos y mecanismos agrícolas. La amplia experiencia permite que se pueda disponer de información respecto a los diferentes campos de aplicación del sistema a desarrollar, como así también los requerimientos mínimos a cumplir. 
 	\item Colaborador: ingeniero electromecánico que trabaja como diseñador y desarrollador de sistemas mecánicos, térmicos e hidráulicos. Una persona que trabaja de forma profesional, que al desarrollar proyectos busca de forma exhaustiva cumplir con sus objetivos. Consta de un amplio conocimiento en maquinarias agropecuarias de siembra y cosecha, en los que puede ser aplicado el sistema a desarrollar.
 	\item Orientador: \textcolor{red}{A DEFINIR}.
+	\item Usuario final: trabajador del área industrial. Específicamente es un operario con conocimientos en la aplicación específica de su proceso industrial, que incluye dosificación de líquidos. Busca agilizar y controlar el proceso del que es responsable, utilizando una interfaz de usuario amigable y robusta. El conocimiento de las nuevas tecnologías puede variar entre distintos operarios, por lo que busca simpleza en las herramienta que utiliza.
 \end{itemize}
 
 
@@ -257,18 +258,18 @@ Para el desarrollo del presente proyecto se tiene a consideración los siguiente
 	\item Requerimientos de documentación:
 		\begin{enumerate}
 			\item Se debe documentar de manera clara las instrucciones de uso del dosificador.
-			\item El sistema de control, junto a sus entradas y salidas, deben ser especificados eléctricamente para realizar su posterior conexión.
+			\item El sistema de control, junto a sus entradas y salidas, debe ser especificado eléctricamente para realizar su posterior conexión.
 			\item Se debe documentar las conexiones de alimentación y del sistema electromecánico para su puesta en marcha.
 		\end{enumerate}
 		
 	\item Requerimiento de testing y pruebas:
 		\begin{enumerate}
-			\item Se deben presentar resultados de las pruebas unitarias a definir y de integración.
+			\item Se deben presentar resultados de las pruebas unitarias y de integración, con alcance a definir.
 			\item Se deben realizar pruebas de aceptación en presencia del cliente.
 			\item Las pruebas del sistema deben evidenciar los objetivos propuestos en este trabajo.
 		\end{enumerate}
 		
-	\item Requerimientos de comunicación (opcional): el desarrollador podría proponer un sistema de comunicación inalámbrico, que permita al usuario conectarse a través de un celular y pueda configurar y visualizar datos.
+	\item Requerimientos de comunicación (opcional): el desarrollador podría proponer un sistema de comunicación inalámbrico, que permita al usuario conectarse a través de un celular, que permita configurar el sistema y visualizar datos.
 \end{enumerate}
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
@@ -277,7 +278,7 @@ Para el desarrollo del presente proyecto se tiene a consideración los siguiente
 En esta sección se describen las historias de usuarios y sus puntajes correspondientes. Los 3 aspectos que definirán los puntajes de las historias son los siguientes:
 
 \begin{enumerate}
-\item Dificultad: cantidad del trabajo a realizar.
+\item Dificultad: cantidad de trabajo a realizar.
 \item Complejidad: complejidad del trabajo a realizar.
 \item Incertidumbre: riesgo del trabajo a realizar.
 \end{enumerate}
@@ -311,19 +312,19 @@ Historia de usuarios:
 \item Operario: ``Como operario de la industria química, desearía un dosificador que permita cambiar la dosificación de forma automática para no tener que hacerlo manualmente."
 
 \begin{itemize}
-	\item Dificultad media (2): realizar un sistema de control automático que depende de un parámetro variable es algo que puede generar inestabilidades durante su control. A pesar de esto, si se definen los tiempos de accionamiento y los límites, se puede realizar.
+	\item Dificultad media (2): realizar un sistema de control automático que depende de un parámetro variable es algo que puede generar inestabilidades durante su control. A pesar de esto, si se definen los tiempos de accionamiento y límites, se puede realizar.
 	\item Complejidad alta (3): requiere implementar un sistema de control digital, donde se controle y limite la variable de entrada y salida, para evitar oscilaciones. Si el parámetro de entrada oscila rápidamente, puede generar inestabilidades durante la dosificación, por lo que es algo que se debe caracterizar.
-	\item Riesgo medio (2): en caso de que no pueda aplicarse un control automático en todos los casos, el sistema permite igualmente ingresar por teclado el punto de trabajo deseado, por lo que el usuario podrá de todas maneras reemplazar el sistema manual que utiliza actualmente.
+	\item Riesgo medio (2): en caso de que no pueda aplicarse un control automático en todos los casos, el sistema permite igualmente ingresar por teclado el punto de trabajo deseado. Por esto, el usuario podrá de todas maneras reemplazar el sistema manual que utiliza actualmente.
 \end{itemize}
 
 \textit{Story points}: 7.
 
-\item Ingeniero agrónomo: ``Durante la siembra, se inyectan productos agropecuarios a la tierra y los operarios deben cambiar manualmente la dosis. Esto cuesta mucho durante el proceso ya que no es algo que se pueda hacer rápidamente, además de que no se puede controlar a simple vista. Desearía un sistema que permita ingresar un valor de dosis por teclado rápidamente y que sea visible, para constatar que este es el correcto y así evitar errores de dosificación."
+\item Ingeniero agrónomo: ``Durante la siembra, se inyectan productos agropecuarios a la tierra y los operarios deben cambiar manualmente la dosis. Esto cuesta mucho durante el proceso ya que no es algo que se pueda hacer rápidamente, además de que no se puede constatar el valor a simple vista. Desearía un sistema que permita ingresar un valor de dosis por teclado rápidamente y que sea visible, para constatar que este es el correcto y así evitar errores de dosificación."
 
 \begin{itemize}
 	\item Dificultad baja (1): realizar una interfaz de usuario a través de un teclado y una pantalla no es algo que requiera grandes esfuerzos.
 	\item Complejidad media (2): este sistema debe ser robusto y confiable, por lo que la validación de datos, confirmación y ajustes de parámetros es indispensable. Además, se debe proveer una interfaz duradera, ya que será utilizada en el campo.
-	\item Riesgo bajo (1): para lograr este objetivo, se debe analizar productos con interfaz de usuario que se utilizan en el campo. De esta manera se puede obtener una idea de qué tipo de interfaz rápida y confiable se puede utilizar. A pesar de esto, una mala interfaz puede generar molestia al momento de utilizar el dosificador.
+	\item Riesgo bajo (1): para lograr este objetivo, se debe analizar productos con interfaz de usuario que se utilizan actualmente en el campo. De esta manera se puede obtener una idea de qué tipo de interfaz rápida y confiable se puede utilizar. A pesar de esto, una mala interfaz puede generar molestia al momento de utilizar el dosificador.
 \end{itemize}
 
 \textit{Story points}: 4
@@ -361,7 +362,7 @@ A continuación, se desglosa el trabajo en tareas con su duración estimada:
 		\begin{enumerate}
 		\item Selección del dispositivo de accionamiento, medición de caudal y caracterización de las señales correspondientes (20 h).
 		\item Definición del sistema de control y algoritmo (30 h).
-		\item Determinación los periféricos de entrada y salida (15 h).
+		\item Determinación de los periféricos de entrada y salida (15 h).
 		\item Definición de circuitos e interfaces de acondicionamiento de señales (15 h).
 		\end{enumerate}
 		
