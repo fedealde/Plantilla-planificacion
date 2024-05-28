@@ -18,8 +18,8 @@
 \autor{Ing. Federico Leonardo Alderisi}
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Título y Nombre del director}
-\pertenenciaDirector{pertenencia} 
+\director{Ing. César Fabián Boarelli}
+\pertenenciaDirector{UTN - FRM} 
 \codirector{} % para que aparezca en la portada se debe descomentar la opción codirector en los parámetros de documentclass -> {} %Título y Nombre del codirector
 \pertenenciaCoDirector{FIUBA}
 
@@ -63,8 +63,8 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & {día} de {mes} de 202X \\ \hline
-%3      & Se completa hasta el punto 12 inclusive                & {día} de {mes} de 202X \\ \hline
-%4      & Se completa el plan	                                 & {día} de {mes} de 202X \\ \hline
+3      & Se completa hasta el punto 12 inclusive                & {21} de {mayo} de 2024 \\ \hline
+4      & Se completa el plan	                                 & {día} de {mes} de 202X \\ \hline
 
 % Si hay más correcciones pasada la versión 4 también se deben especificar acá
 
@@ -84,7 +84,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un prototipo de un sistema de control de dosificación de líquidos industriales, de forma controlada y autoajustable, mediante un parámetro externo provisto por el usuario. El trabajo tendrá un presupuesto preliminar estimado de \textcolor{red}{600} horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \textcolor{red}{fecha de presentación pública a definir}.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un prototipo de un sistema de control de dosificación de líquidos industriales, de forma controlada y autoajustable, mediante un parámetro externo provisto por el usuario. El trabajo tendrá un presupuesto preliminar estimado de 615 horas y un costo estimado de \$4.795.200, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública a definir.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -99,9 +99,6 @@ Se adjunta a esta acta la planificación inicial.
 \end{tabular}
 \end{table}
 
-
-
-
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
@@ -111,12 +108,14 @@ Comúnmente, los sistemas de dosificación controlada constan de un único pará
 
 A continuación, en la figura \ref{fig:diagCaudalimetroGenerico} se ilustra un sistema dosificador continuo y controlado utilizado en la industria actualmente.
 
+\vspace{25px}
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=.45\textwidth]{./Figuras/diagCaudalimetroGenerico.png}
 \caption{Dosificador genérico.}
 \label{fig:diagCaudalimetroGenerico}
 \end{figure}
+
 
 A pesar de ser un sistema utilizado en distintos procesos industriales, los sistemas de dosificación actuales no pueden transportarse ya que están fijos en una etapa del proceso. Además, estos controlan grandes o medianos caudales y su punto de trabajo se mantiene constante. En consecuencia, aquellas aplicaciones que requieran transportar un dosificador a distintos lugares o utilizar un parámetro de referencia variable para la dosificación, no pueden llevarse a cabo.
 
@@ -135,7 +134,7 @@ A continuación, en la figura \ref{fig:diagBloquesGeneral} se ilustra un diagram
 \label{fig:diagBloquesGeneral}
 \end{figure}
 
-Es importante destacar que este proyecto se realiza como un emprendimiento personal, junto a un colaborador, que será responsable del diseño mecánico e hidráulico. Este proyecto se circunscribe al desarrollo del firmware y hardware de este sistema.
+Es importante destacar que este proyecto se realiza como un emprendimiento personal, junto a un colaborador que será responsable del diseño mecánico e hidráulico. Este proyecto se circunscribe al desarrollo del firmware y hardware de este sistema.
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
@@ -153,7 +152,7 @@ Cliente       & \clientename      &\empclientename	& Consultor comercial	\\ \hli
 %Impulsor      &                   &              	&        	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
 Colaboradores & Ing. Julián Marchese                  & -              	& Diseñador       	\\ \hline
-Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ \hline
+Orientador    & \supname	      & UTN - FRM 	& Director del Trabajo Final \\ \hline
 %Equipo        & miembro1 \newline 
 %				miembro2          &              	&        	\\ \hline
 %Opositores    &                   &              	&        	\\ \hline
@@ -166,7 +165,7 @@ Las características principales de cada uno de los interesados listados previam
 \begin{itemize}
 	\item Cliente: ingeniero agrónomo de amplia experiencia en la industria alimentaria, agropecuaria y en el área comercial. Es una persona rigurosa y exigente al observar posibles mejoras en procesos industriales. Busca agilizar y eficientizar procedimientos y mecanismos agrícolas. La amplia experiencia permite que se pueda disponer de información respecto a los diferentes campos de aplicación del sistema a desarrollar, como así también los requerimientos mínimos a cumplir. 
 	\item Colaborador: ingeniero electromecánico que trabaja como diseñador y desarrollador de sistemas mecánicos, térmicos e hidráulicos. Una persona que trabaja de forma profesional, que al desarrollar proyectos busca de forma exhaustiva cumplir con sus objetivos. Consta de un amplio conocimiento en maquinarias agropecuarias de siembra y cosecha, en los que puede ser aplicado el sistema a desarrollar.
-	\item Orientador: \textcolor{red}{A DEFINIR}.
+	\item Orientador: ingeniero electrónico, domina las técnicas de diseño y armado de circuitos electrónicos de baja potencia y electrónica de baja escala de integración. Amplia experiencia en diseño asistido por computadora de sistemas de control, temperatura, presión, caudal, compensadores y PID. En la actualidad se encuentra realizando la maestría en Energía Renovables. Consta de una extensa formación complementaria en el área de sistemas control. Es un profesor comprometido con la modernización del área educacional e impulsa el perfeccionamiento de los trabajos desarrollados en el ámbito académico.
 	\item Usuario final: trabajador del área industrial. Específicamente es un operario con conocimientos en la aplicación específica de su proceso industrial, que incluye dosificación de líquidos. Busca agilizar y controlar el proceso del que es responsable, utilizando una interfaz de usuario amigable y robusta. El conocimiento de las nuevas tecnologías puede variar entre distintos operarios, por lo que busca simpleza en las herramienta que utiliza.
 \end{itemize}
 
@@ -234,7 +233,7 @@ Para el desarrollo del presente proyecto se tiene a consideración los siguiente
 			\item La muestra de caudal debe poder ser adquirida desde una señal provista por un caudalímetro.
 			\item La señal de salida del sistema de control debe permitir ser aplicada sobre un dispositivo de accionamiento, como una bomba o válvula, a definir durante el desarrollo.
 			\item El sistema de control debe permitir que el usuario ingrese un valor como punto de trabajo o admitir un valor de referencia externo que funcione como punto de trabajo variable.
-			\item El sistema debe permitir dosificar en forma continua, teniendo en cuenta el nivel del líquido del tanque y los límites de dosificación (de trescientos a \textcolor{red}{A DEFINIR} milímetros cúbicos por minuto).
+			\item El sistema debe permitir dosificar en forma continua, teniendo en cuenta el nivel del líquido del tanque y los límites de dosificación (entre trescientos y un valor a definir durante el transcurso del proyecto, medido en milímetros cúbicos por minuto).
 			\item El sistema debe lograr el equilibrio en un tiempo acotado, en función del proceso en el que se utilizará, siendo este tiempo menor a 3 segundos.			
 			\item El valor de referencia externo debe ser un valor acondicionado, que provenga de una entrada del sistema embebido utilizado.
 			\item El sistema de alimentación debe ser monitoreado para mantener la integridad del dosificador.
@@ -309,7 +308,7 @@ Se utilizará una escala de 3 puntos, donde el valor más alto implica mayor cos
 Historia de usuarios:
 
 \begin{enumerate}
-\item Operario: ``Como operario de la industria química, desearía un dosificador que permita cambiar la dosificación de forma automática para no tener que hacerlo manualmente."
+\item Operario: ``Como operario de la industria química, deseo un dosificador que permita cambiar la dosificación de forma automática para no tener que hacerlo manualmente."
 
 \begin{itemize}
 	\item Dificultad media (2): realizar un sistema de control automático que depende de un parámetro variable es algo que puede generar inestabilidades durante su control. A pesar de esto, si se definen los tiempos de accionamiento y límites, se puede realizar.
@@ -319,7 +318,7 @@ Historia de usuarios:
 
 \textit{Story points}: 7.
 
-\item Ingeniero agrónomo: ``Durante la siembra, se inyectan productos agropecuarios a la tierra y los operarios deben cambiar manualmente la dosis. Esto cuesta mucho durante el proceso ya que no es algo que se pueda hacer rápidamente, además de que no se puede constatar el valor a simple vista. Desearía un sistema que permita ingresar un valor de dosis por teclado rápidamente y que sea visible, para constatar que este es el correcto y así evitar errores de dosificación."
+\item Ingeniero agrónomo: ``Como ingeniero agrónomo quiero un sistema que permita ingresar un valor de dosis por teclado rápidamente y que sea visible, para agilizar la inyección de productos durante la siembra, constatar que este es el correcto y así evitar errores de dosificación."
 
 \begin{itemize}
 	\item Dificultad baja (1): realizar una interfaz de usuario a través de un teclado y una pantalla no es algo que requiera grandes esfuerzos.
@@ -417,130 +416,63 @@ Total de horas estimadas: 615 h.
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior.
 
-Una herramienta simple para desarrollar los diagramas es el Draw.io (\url{https://app.diagrams.net/}).
-\href{https://app.diagrams.net}{Draw.io}
+En las figuras \ref{fig:actOnNode1} y \ref{fig:actOnNode2} se muestra el diagrama de Activity on Node del presente proyecto, basado en el desglose de tareas. Las referencias temporales son presentadas en horas. Las flechas en rojo muestran el camino crítico, que suma un total de 340 h.
 
-
-\begin{figure}[htpb]
-\centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
-\caption{Diagrama de \textit{Activity on Node}.}
-\label{fig:AoN}
-\end{figure}
-
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semi críticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color.
-
-\end{consigna}
-
-\section{11. Diagrama de Gantt}
-\label{sec:gantt}
-
-\begin{consigna}{red}
-Existen muchos programas y recursos \textit{online} para hacer diagramas de Gantt, entre los cuales destacamos:
-
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. 
-En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-Las fechas pueden ser calculadas utilizando alguna de las herramientas antes citadas. Sin embargo, el siguiente ejemplo
-fue elaborado utilizando 
-\href{https://docs.google.com/spreadsheets/d/1fBz8NhSpc4tkkhz3KjJCbh1nR_ltDkfEcZi4tZXduqs}{esta hoja de cálculo}.
-
-Es importante destacar que el ancho del diagrama estará dado por la longitud del texto utilizado para las tareas 
-(Ejemplo: tarea 1, tarea 2, etcétera) y el valor \textit{x unit}. Para mejorar la apariencia del diagrama, es necesario
-ajustar este valor y, quizás, acortar los nombres de las tareas.
-
-\begin{figure}[htpb]
-  \begin{center}
-    \begin{ganttchart}[
-      time slot unit=day,
-      time slot format=isodate,
-      x unit=0.038cm,
-      y unit title=0.7cm,
-      y unit chart=0.6cm,
-      milestone/.append style={xscale=4}
-      ]{2021-03-05}{2021-12-16}
-      \gantttitlecalendar*{2021-03-05}{2021-12-16}{year} \\
-      \gantttitlecalendar*{2021-03-05}{2021-12-16}{month} \\
-      \ganttgroup{Duración Total}{2021-03-05}{2021-12-16} \\
-      %%%%%%%%%%%%%%%%%Organización
-      \ganttgroup{Organización}{2021-03-05}{2021-04-16} \\
-      \ganttbar{Planificación del proyecto}{2021-03-05}{2021-04-15} \\
-      %%%%%%%%%%%%%%%%%Ejecución
-      \ganttgroup{Ejecución}{2021-04-16}{2021-10-21} \\
-      \ganttbar{Tarea 1}{2021-04-16}{2021-04-29} \\
-      \ganttbar{Tarea 2}{2021-04-30}{2021-05-13} \\
-      \ganttbar{Tarea 3}{2021-05-14}{2021-05-27} \\
-      \ganttbar{Tarea 4}{2021-05-28}{2021-07-12} \\
-      \ganttbar{Tarea 5}{2021-07-13}{2021-08-09} \\
-      \ganttbar{Tarea 6}{2021-08-10}{2021-09-23} \\
-      \ganttbar{Tarea 7}{2021-09-24}{2021-09-30} \\
-      \ganttbar{Tarea 8}{2021-10-01}{2021-10-14} \\
-      \ganttbar{Tarea 9}{2021-10-15}{2021-10-21} \\
-      % %%%%%%%%%%%%%%%%%Finalización
-      \ganttgroup{Finalización}{2021-10-22}{2021-12-16} \\
-      \ganttbar{Memoria v1}{2021-10-22}{2021-11-04} \\
-      \ganttbar{Memoria v2}{2021-11-05}{2021-11-18} \\
-      \ganttbar{Memoria final}{2021-11-19}{2021-12-02} \\
-      % La fecha del siguiente milestone es la fecha en que terminamos la memoria
-      \ganttmilestone{Enviar memoria al director}{2021-12-02} \\
-      \ganttbar{Elaborar la presentación}{2021-12-03}{2021-12-16} \\
-      \ganttmilestone{Ensayo de la presentación}{2021-12-16} \\
-      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \end{ganttchart}
-  \end{center}
-  \caption{Diagrama de gantt de ejemplo}
-  \label{fig:gantt}
-\end{figure}
 
 
 \begin{landscape}
 \begin{figure}[htpb]
+\vspace{55px}
 \centering 
-\includegraphics[height=.85\textheight]{./Figuras/Gantt-2.png}
-\caption{Ejemplo de diagrama de Gantt (apaisado).} %Modificar este título acorde.
-\label{fig:diagGantt}
+\includegraphics[height=.6\textheight]{./Figuras/actOnNode1.png}
+\caption{Diagrama de \textit{Activity on Node(1).}}
+\label{fig:actOnNode1}
 \end{figure}
-
 \end{landscape}
 
-\end{consigna}
+\begin{landscape}
+\begin{figure}[htpb]
+\vspace{55px}
+\centering 
+\includegraphics[height=.6\textheight]{./Figuras/actOnNode2.png}
+\caption{Diagrama de \textit{Activity on Node(2).}}
+\label{fig:actOnNode2}
+\end{figure}
+\end{landscape}
+
+
+\section{11. Diagrama de Gantt}
+\label{sec:gantt}
+
+A continuación, en la figura \ref{fig:ganntTable} se muestra la tabla con la información correspondiente al desglose de tareas. Además, se observa su duración, fecha de inicio y fecha de fin. El diagrama de Gannt se puede observar en la imagen \ref{fig:ganntImag}.
+
+
+
+\begin{figure}[htpb]
+\vspace{55px}
+\centering 
+\includegraphics[height=.5\textheight]{./Figuras/ganntTable.png}
+\caption{Tabla del diagrama de \textit{Gannt.}}
+\label{fig:ganntTable}
+\end{figure}
+
+\begin{landscape}
+\begin{figure}[htpb]
+\centering 
+\vspace{80px}
+\includegraphics[height=.5\textheight]{./Figuras/ganntImag.png}
+\caption{Diagrama de \textit{Gannt.}}
+\label{fig:ganntImag}
+\end{figure}
+\end{landscape}
 
 
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-	\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-	\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
+A continuación, se describen los costos aproximados del proyecto expresados en pesos argentinos. Estos costos se basan en los valores promedios que se encontraron para distintos elementos candidatos a ser utilizados, por lo que estos valores pueden verse ajustados durante el desarrollo del proyecto. El valor de 1 USD (dólar estadounidense), al momento de realizar el presupuesto, es de \$1.200.
 
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-Incluir la aclaración de si se emplea como moneda el peso argentino (ARS) o si se usa moneda extranjera (USD, EUR, etc). Si es en moneda extranjera se debe indicar la tasa de conversión respecto a la moneda local en una fecha dada.
-
-\end{consigna}
 
 \begin{table}[htpb]
 \centering
@@ -553,24 +485,55 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+  
+  \multicolumn{1}{|l|}{Horas de ingeniería}&
+  \multicolumn{1}{c|}{615} &
+  \multicolumn{1}{c|}{\$ 5000} &
+  \multicolumn{1}{c|}{\$3 250 000} \\ \hline
+  
+  \multicolumn{1}{|l|}{Microcontrolador}&
+  \multicolumn{1}{c|}{2} &
+  \multicolumn{1}{c|}{\$45 000} &
+  \multicolumn{1}{c|}{\$90 000} \\ \hline
+  
+  \multicolumn{1}{|l|}{Manufactura de PCB}&
+  \multicolumn{1}{c|}{5} &
+  \multicolumn{1}{c|}{\$10 000} &
+  \multicolumn{1}{c|}{\$50 000} \\ \hline
+  
+  \multicolumn{1}{|l|}{Componentes pasivos}&
+  \multicolumn{1}{c|}{300} &
+  \multicolumn{1}{c|}{\$100} &
+  \multicolumn{1}{c|}{\$30 000} \\ \hline
+  
+  \multicolumn{1}{|l|}{Fuente de alimentación}&
+  \multicolumn{1}{c|}{2} &
+  \multicolumn{1}{c|}{\$3500} &
+  \multicolumn{1}{c|}{\$7000} \\ \hline
+
+  \multicolumn{1}{|l|}{Conectores, borneras y otros}&
+  \multicolumn{1}{c|}{5} &
+  \multicolumn{1}{c|}{\$10 000} &
+  \multicolumn{1}{c|}{\$50 000} \\ \hline
+  
+  \multicolumn{1}{|l|}{Sensores}&
+  \multicolumn{1}{c|}{2} &
+  \multicolumn{1}{c|}{\$17 500} &
+  \multicolumn{1}{c|}{\$35 000} \\ \hline
+  
+  \multicolumn{1}{|l|}{Caja estanca}&
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{\$15 000} &
+  \multicolumn{1}{c|}{\$15 000} \\ \hline
+  
+  \multicolumn{1}{|l|}{Interfaz gráfica y teclado}&
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{\$25 000} &
+  \multicolumn{1}{c|}{\$25 000} \\ \hline
+
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{\$3 552 000} \\ \hline
+  
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -578,59 +541,67 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+  
+  \multicolumn{1}{|l|}{35\% de los costos directos}&
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{\$1 243 200} &
+  \multicolumn{1}{c|}{\$1 243 200} \\ \hline
+  
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{\$1 243 200} \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &
-   \\ \hline
-\end{tabularx}%
+\multicolumn{1}{c|}{\$4 795 200} \\ \hline
+
+\end{tabularx}
 \end{table}
 
 
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
- 
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
-\begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
-\end{itemize}   
 
-Riesgo 2:
+a) En la siguiente sección se describen los principales riesgos, sus consecuencias y se estima la importancia a partir del análisis de los siguientes parámetros:
+
+\begin{enumerate}
+\item Severidad (S): se evalúa del 1 al 10, siendo el 10 el grado más alto de importancia y consecuencias.
+\item Probabilidad de ocurrencia (O): se evalúa del 1 al 10, siendo el 10 el grado más alto de probabilidad de ocurrencia.
+\item Nivel de prioridad de riesgo (RPN): se obtiene al realizar el producto de la \textit{Severidad (S)} y la \textit{Probabildad de ocurrencia (O)}, este representa un nivel relativo y comparativo del nivel de importancia.
+\end{enumerate}
+
+Riesgo 1: demora de entrega al importar dispositivos o faltante de estos.
 \begin{itemize}
-	\item Severidad (S): X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+	\item Severidad (S): 8, esto impacta fuertemente ya que el desarrollo y las pruebas dependen de los dispositivos y controladores.
+	\item Ocurrencia (O): 7, esto suele suceder frecuentemente, a mediad que el precio de la encomienda es mayor.
 \end{itemize}
 
-Riesgo 3:
+Riesgo 2: dificultad durante el desarrollo del sistema de control.
 \begin{itemize}
-	\item Severidad (S):  X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+	\item Severidad (S): 7, esto genera una complicación importante ya que el principal objetivo del proyecto es el desarrollo e implementación de un sistema de control.
+	\item Ocurrencia (O): 4, el sistema de control a implementar no requiere un desarrollo completamente desconocido. Existen implementaciones y casos similares de aplicación, en donde se puede recopilar información afín.
 \end{itemize}
 
+Riesgo 3: destrucción del prototipo durante las pruebas.
+\begin{itemize}
+	\item Severidad (S): 9, la destrucción del prototipo implica la perdida del entregable principal.
+	\item Ocurrencia (O): 7, esto es posible ya que las pruebas funcionales requieren ser realizadas en el campo de aplicación, junto a los equipos electromecánicos.
+\end{itemize}
 
-b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+Riesgo 4: elevados costos de componentes y materiales.
+\begin{itemize}
+	\item Severidad (S): 4, ya que este proyecto no requiere componentes que impliquen gran inversión, a pesar de que puedan tener un aumento a corto plazo.
+	\item Ocurrencia (O): 5, es probable que aumenten los precios de los dispositivos electrónicos durante un posible conflicto bélico en los países asiáticos donde se realiza la manufactura (como China y Taiwan).
+\end{itemize}
+
+Riesgo 5: modificación del alcance del proyecto durante el desarrollo.
+\begin{itemize}
+	\item Severidad (S): 7, esto modifica notablemente la planificación, el tiempo y el costo del desarrollo.
+	\item Ocurrencia (O): 3, esto tiene baja ocurrencia ya que se realizó un estudio previo amplio a través de encuestas a posibles usuarios.
+\end{itemize}
+
+b) En la siguiente tabla de gestión de riesgos se representan los niveles de prioridad para los riesgos listados anteriormente:
+
+Criterio adoptado: se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 40. 
 
 \begin{table}[htpb]
 \centering
@@ -638,77 +609,128 @@ b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
+   Riesgo 1: demora de entrega al importar dispositivos o faltante de estos.    & 8  & 7  &  56   &  8  &  3  &  24    \\ \hline
+   Riesgo 2: dificultad durante el desarrollo del sistema de control.    & 7  & 4  &  28   &  -  &  -  &   -   \\ \hline
+   Riesgo 3: destrucción del prototipo durante las pruebas.    & 9  & 7  &  63   &  4  & 7   &  28    \\ \hline
+   Riesgo 4: elevados costos de componentes y materiales.    &  4 & 5  &  20   &  -  &  -  &   -   \\ \hline
+   Riesgo 5: modificación del alcance del proyecto durante el desarrollo.    & 7  & 3  &  21   &  -  &  -  &   -   \\ \hline
 \end{tabularx}%
 \end{table}
 
-Criterio adoptado: 
-
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
-
-Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
-
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
- 
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
+
+Riesgo 1: se definirán los dispositivos a utilizar con anticipación, para acortar los posibles retrasos. Además, se buscarán distintos proveedores internos y externos, priorizando los internos, para evitar las complicaciones que se generan durante la importación. EN caso de importar, se intentarán realizar pequeñas compras para evitar detención de la encomienda en la aduana.
+
   \begin{itemize}
-	\item Severidad (S*): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O*): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
+	\item Severidad (S*): 8, si sucede. impacta igualmente en el desarrollo.
+	\item Probabilidad de ocurrencia (O*): 3, ya que al priorizar los proveedores internos, se disminuye la probabilidad de los problemas al importar pequeñas cantidades de dispositivos.
 	\end{itemize}
 
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-
-\end{consigna}
+Riesgo 3: está previsto realizar un prototipo de respaldo, para que en caso de falla o destrucción, aún exista la posibilidad de proveer el entregable principal. Este tendrá las mismas características funcionales que el prototipo principal.
+  \begin{itemize}
+	\item Severidad (S*): 4, a pesar de que existe un prototipo de respaldo, este no será el original con el que se realizarán todas las pruebas, sino es solo un respaldo.
+	\item Probabilidad de ocurrencia (O*): 7, la probabilidad no disminuye ya que las pruebas se deben realizar igualmente y el riesgo de fallas se mantiene.
+	\end{itemize}
 
 
 \section{14. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
-Elija al menos diez requerimientos que a su criterio sean los más importantes/críticos/que aportan más valor y para cada uno de ellos indique las acciones de verificación y validación que permitan asegurar su cumplimiento.
+En esta sección se describen las verificaciones y validaciones para los requerimientos definidos como críticos:
 
 \begin{itemize} 
-\item Req \#1: copiar acá el requerimiento con su correspondiente número.
+\item Req 1.1.1.1) El prototipo debe permitir controlar el caudal de líquido dosificado en milímetros cúbicos por minuto.
 
 \begin{itemize}
-	\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar.
-	\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar. 
+	\item Verificación: se ingresarán distintos valores a través de la interfaz gráfica y se controlará el volumen del líquido expedido por el sistema luego de un minuto.
+	\item Validación: el cliente inspeccionará el caudal y el volumen expedido a través un método elegido por él.
+\end{itemize}
+
+\item Req 1.1.1.2) La muestra de caudal debe poder ser adquirida desde una señal provista por un caudalímetro.
+
+\begin{itemize}
+	\item Verificación: se utilizarán distintas valores y puntos de trabajos simulando la señal de un caudalímetro real.
+	\item Validación: se instalará el prototipo junto al sistema electromecánico y se conectará a la señal del caudalímetro.
+\end{itemize}
+
+\item Req 1.1.1.4) El sistema de control debe permitir que el usuario ingrese un valor como punto de trabajo o admitir un valor de referencia externo que funcione como punto de trabajo variable.
+
+\begin{itemize}
+	\item Verificación: se cambiará la configuración del parámetro de entrada del sistema de control durante su funcionamiento.
+	\item Validación: se inyectará una señal que simule un parámetro variable que cambia el punto de trabajo del dosificador, observando el comportamiento a la salida del sistema.
+\end{itemize}
+
+\item Req 1.1.1.6) El sistema debe lograr el equilibrio en un tiempo acotado, en función del proceso en el que se utilizará, siendo este tiempo menor a 3 segundos.
+
+\begin{itemize}
+	\item Verificación: se calculará el tiempo de establecimiento del sistema de control.
+	\item Validación: se realizarán pruebas con parámetros estáticos y variables para corroborar el tiempo de establecimiento del caudal.
+\end{itemize}
+
+\item Req 1.1.2.1) La interfaz debe permitir configurar la dosis y cambiar el modo de funcionamiento.
+
+\begin{itemize}
+	\item Verificación: se implementarán pruebas de interfaz gráfica y teclado, para verificar las distintas combinaciones de manipulación del menú y la configuración.
+	\item Validación: el usuario navegará por todo los menús y configuraciones antes y durante el funcionamiento.
+\end{itemize}
+
+\item Req 1.1.2.3) El teclado debe permitir ingresar el valor de dosificación de forma numérica, además de incluir las funciones para cambiar de menú, encender y apagar la bomba, y navegar dentro del menú.
+
+\begin{itemize}
+	\item Verificación: se le entregará al cliente un documento previo con las distintas presentaciones de datos, modos de configuración y menús que tendrá el sistema.
+	\item Validación: el cliente podrá corroborar lo solicitado durante la navegación en el menú del sistema.
+\end{itemize}
+
+\item Req 1.1.2.4) El prototipo debe mostrar señales lumínicas en función del estado de la alimentación, modo de funcionamiento y alarmas.
+
+\begin{itemize}
+	\item Verificación: se generarán fallas y estados de alerta que permitan corroborar las salidas del sistema de control.
+	\item Validación: durante las pruebas finales, se generarán fallas para corroborar su correcto funcionamiento.
+\end{itemize}
+
+\item Req 1.1.3.1): El sistema de alimentación debe poder ser conectado a una línea de alimentación de 12 Volts C.C. y adaptar esta tensión a lo requerido por el dosificador.
+
+\begin{itemize}
+	\item Verificación: se constatarán los valores de tensión de entrada y salida del sistema de alimentación.
+	\item Validación: una vez instalado el prototipo, se constatarán los valores de entrada y salida del sistema de alimentación.
+\end{itemize}
+
+\item Req 1.1.3.2): El usuario debe poder encender o apagar el sistema de alimentación y, en consecuencia, el dosificador.
+
+\begin{itemize}
+	\item Verificación: se simulará el sistema de encendido y apagado de alimentación.
+	\item Validación: el cliente realizará pruebas de corte y encendido de alimentación.
+\end{itemize}
+
+\item Req 1.1.3.3): El controlador debe poder apagar el sistema de alimentación, como así también limitar y aislar los puntos de falla, como el sistema de accionamiento a definir.
+
+\begin{itemize}
+	\item Verificación: se realizarán pruebas no destructivas que simulen un estado de falla eléctrico para forzar el sistema de apagado automático.
+	\item Validación: se forzará una falla de baja tensión de entrada, para generar una alarma.
 \end{itemize}
 
 \end{itemize}
 
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.  
-
-Las acciones de verificación suelen considerar al entregable como ``caja blanca'', es decir se conoce en profundidad su funcionamiento interno.  
-
-En cambio, las acciones de validación suelen considerar al entregable como ``caja negra'', es decir, que no se conocen los detalles de su funcionamiento interno.
-
-\end{consigna}
 
 \section{15. Procesos de cierre}    
 \label{sec:cierre}
 
-\begin{consigna}{red}
-Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
-
 \begin{itemize}
-	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:\\
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
-	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, los problemas que surgieron y cómo se solucionaron:\\
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
-	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:\\
-	  - Indicar esto y quién financiará los gastos correspondientes.
-\end{itemize}
-
-\end{consigna}
-
+	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
+		\begin{enumerate}
+		\item Responsable: Federico Leonardo Alderisi.
+		\item Se verificará que los requerimientos se hayan cumplido, que las verificaciones y validaciones hayan sido correctamente elegidas y si el tiempo dedicado coincidió con la planificación.
+		\end{enumerate}		 
+	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, los problemas que surgieron y cómo se solucionaron:
+		\begin{enumerate}
+		\item Responsable: Federico Leonardo Alderisi.
+		\item Se revisará el enfoque y métodos de programación utilizados, la elección del sistema de control y la versatilidad de la interfaz gráfica desarrollada para evaluar y listar las mejoras que podrían realizarse en futuros trabajos.
+		\end{enumerate}	
+	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:
+		\begin{enumerate}
+		\item Responsable: Federico Leonardo Alderisi.
+		\item Se agradecerá formalmente a los colaboradores, profesores y autoridades de la especialización, como así también al cliente y a los participantes indirectos que hicieron posible el desarrollo trabajo final.
+		\end{enumerate}	
+\end{itemize}	  
+	  
 \end{document}
